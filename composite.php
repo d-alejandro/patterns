@@ -5,7 +5,7 @@ interface Component
     public function execute(): string;
 }
 
-class Сomposite implements Component
+class Composite implements Component
 {
     private array $componentList = [];
 
@@ -49,7 +49,7 @@ class ComponentB implements Component
 $componentA = new ComponentA();
 $componentB = new ComponentB();
 
-$composite = new Сomposite();
+$composite = new Composite();
 
 $composite->add($componentA);
 $composite->add($componentB);
