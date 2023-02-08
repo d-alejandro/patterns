@@ -14,6 +14,7 @@
 - Mock Object
 - Observer
 - Proxy
+- Repository Criteria
 - Singleton
 - State
 - Strategy
