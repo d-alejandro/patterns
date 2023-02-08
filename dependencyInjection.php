@@ -2,8 +2,10 @@
 
 class Client
 {
-    public function __construct(private ServiceA $serviceA, private ServiceB $serviceB)
-    {
+    public function __construct(
+        private ServiceA $serviceA,
+        private ServiceB $serviceB
+    ) {
     }
 
     public function execute(): string

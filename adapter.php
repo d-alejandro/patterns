@@ -15,8 +15,9 @@ interface Adapter
 
 class AdapterImplementation implements Adapter
 {
-    public function __construct(private APIClass $apiClass)
-    {
+    public function __construct(
+        private APIClass $apiClass
+    ) {
     }
 
     public function execute(): string

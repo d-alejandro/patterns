@@ -23,8 +23,9 @@ class Subtraction implements Strategy
 
 class Context
 {
-    public function __construct(private Strategy $strategy)
-    {
+    public function __construct(
+        private Strategy $strategy
+    ) {
     }
 
     public function execute(int $x, int $y): int

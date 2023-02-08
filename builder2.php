@@ -21,8 +21,9 @@ interface Builder extends StepABuilder, StepBBuilder
 
 class TextBuilderImplementation implements TextBuilder
 {
-    public function __construct(protected TextDTO $textDTO)
-    {
+    public function __construct(
+        protected TextDTO $textDTO
+    ) {
     }
 
     public function getText(): string
@@ -70,8 +71,10 @@ class BuilderImplementation implements Builder
 {
     private TextBuilder $textBuilder;
 
-    public function __construct(private StepABuilder $stepABuilder, private StepBBuilder $stepBBuilder)
-    {
+    public function __construct(
+        private StepABuilder $stepABuilder,
+        private StepBBuilder $stepBBuilder
+    ) {
         $this->textBuilder = $stepABuilder;
     }
 
@@ -97,8 +100,9 @@ class BuilderImplementation implements Builder
 
 class Director
 {
-    public function __construct(private Builder $builder)
-    {
+    public function __construct(
+        private Builder $builder
+    ) {
     }
 
     public function build(): string
@@ -112,8 +116,9 @@ class Director
 
 class Manager
 {
-    public function __construct(private StepABuilder $stepABuilder)
-    {
+    public function __construct(
+        private StepABuilder $stepABuilder
+    ) {
     }
 
     public function build(): string

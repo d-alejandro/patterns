@@ -28,8 +28,10 @@ class SubsystemB implements InterfaceB
 
 class Facade
 {
-    public function __construct(private InterfaceA $interfaceA, private InterfaceB $interfaceB)
-    {
+    public function __construct(
+        private InterfaceA $interfaceA,
+        private InterfaceB $interfaceB
+    ) {
     }
 
     public function execute(): string

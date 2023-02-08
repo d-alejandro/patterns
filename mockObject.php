@@ -28,8 +28,10 @@ class LoggerImplementation implements Logger
 
 class ActionClientUseCase
 {
-    public function __construct(private Service $service, private Logger $logger)
-    {
+    public function __construct(
+        private Service $service,
+        private Logger  $logger
+    ) {
     }
 
     public function execute(): string

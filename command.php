@@ -23,8 +23,10 @@ class CommandB implements Command
 
 class Invoker
 {
-    public function __construct(private Command $commandA, private Command $commandB)
-    {
+    public function __construct(
+        private Command $commandA,
+        private Command $commandB
+    ) {
     }
 
     public function executeCommandA(): string

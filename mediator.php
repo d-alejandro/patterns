@@ -40,8 +40,10 @@ class ComponentB extends Component
 
 class MediatorImplementation implements Mediator
 {
-    public function __construct(private ComponentA $componentA, private ComponentB $componentB)
-    {
+    public function __construct(
+        private ComponentA $componentA,
+        private ComponentB $componentB
+    ) {
         $this->componentA->setMediator($this);
         $this->componentB->setMediator($this);
     }

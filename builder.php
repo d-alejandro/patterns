@@ -50,8 +50,9 @@ class BuilderImplementation implements Builder
 
 class Director
 {
-    public function __construct(private Builder $builder)
-    {
+    public function __construct(
+        private Builder $builder
+    ) {
     }
 
     public function build(): string
@@ -65,8 +66,9 @@ class Director
 
 class Manager
 {
-    public function __construct(private StepABuilder $stepABuilder)
-    {
+    public function __construct(
+        private StepABuilder $stepABuilder
+    ) {
     }
 
     public function build(): string

@@ -15,8 +15,9 @@ class ServiceImplementation implements Service
 
 class Proxy implements Service
 {
-    public function __construct(private ServiceImplementation $serviceImplementation)
-    {
+    public function __construct(
+        private ServiceImplementation $serviceImplementation
+    ) {
     }
 
     public function execute(): string

@@ -15,8 +15,9 @@ class ComponentA implements Component
 
 class ComponentADecorator implements Component
 {
-    public function __construct(private Component $component)
-    {
+    public function __construct(
+        private Component $component
+    ) {
     }
 
     public function execute(): string
